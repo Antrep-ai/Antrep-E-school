@@ -6,7 +6,7 @@
 
 @layer base {
   body {
-    @apply font-sans bg-white text-slate-900 antialiased;
+    @apply font-sans bg-slate-950 text-white antialiased;
     scroll-behavior: smooth;
   }
 }
@@ -41,6 +41,25 @@
   
   .animate-scale-in {
     animation: scaleIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+}
+
+@keyframes marqueeLeft {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-33.333%); }
+}
+
+@keyframes marqueeRight {
+  0%   { transform: translateX(-33.333%); }
+  100% { transform: translateX(0); }
+}
+
+@layer utilities {
+  .animate-marquee-left {
+    animation: marqueeLeft 30s linear infinite;
+  }
+  .animate-marquee-right {
+    animation: marqueeRight 30s linear infinite;
   }
 }
 

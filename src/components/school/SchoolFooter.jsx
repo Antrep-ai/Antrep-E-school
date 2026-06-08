@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Rocket, Shield, Globe, Award, Heart } from 'lucide-react';
+import { Rocket, Heart } from 'lucide-react';
 
 export default function SchoolFooter() {
   const currentYear = new Date().getFullYear();
@@ -24,16 +24,16 @@ export default function SchoolFooter() {
   };
 
   return (
-    <footer className="bg-white border-t border-slate-100 mt-auto">
+    <footer className="bg-slate-950 border-t border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
-          {/* Logo and Info */}
-          <div className="space-y-4 col-span-1 md:col-span-1">
+
+          <div className="space-y-4 col-span-1">
             <Link to="/school" className="flex items-center gap-2 group">
-              <div className="bg-brand-600 text-white p-1.5 rounded-lg">
+              <div className="bg-brand-500 text-white p-1.5 rounded-lg group-hover:bg-brand-400 transition-colors">
                 <Rocket className="w-4 h-4" />
               </div>
-              <span className="font-bold text-lg text-slate-900 tracking-tight">
+              <span className="font-bold text-lg text-white tracking-tight group-hover:text-brand-400 transition-colors">
                 ANTREP <span className="text-slate-500 font-normal">School</span>
               </span>
             </Link>
@@ -42,13 +42,12 @@ export default function SchoolFooter() {
             </p>
           </div>
 
-          {/* Links columns */}
           <div>
-            <h4 className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-4">Program</h4>
+            <h4 className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-4">Program</h4>
             <ul className="space-y-2.5">
               {footerLinks.program.map((link, idx) => (
                 <li key={idx}>
-                  <Link to={link.path} className="text-sm text-slate-600 hover:text-brand-600 transition-colors">
+                  <Link to={link.path} className="text-sm text-slate-400 hover:text-brand-400 transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -57,11 +56,11 @@ export default function SchoolFooter() {
           </div>
 
           <div>
-            <h4 className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-4">Resources</h4>
+            <h4 className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-4">Resources</h4>
             <ul className="space-y-2.5">
               {footerLinks.resources.map((link, idx) => (
                 <li key={idx}>
-                  <a href={link.path} className="text-sm text-slate-600 hover:text-brand-600 transition-colors">
+                  <a href={link.path} className="text-sm text-slate-400 hover:text-brand-400 transition-colors">
                     {link.name}
                   </a>
                 </li>
@@ -70,11 +69,11 @@ export default function SchoolFooter() {
           </div>
 
           <div>
-            <h4 className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-4">Legal</h4>
+            <h4 className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-4">Legal</h4>
             <ul className="space-y-2.5">
               {footerLinks.legal.map((link, idx) => (
                 <li key={idx}>
-                  <a href={link.path} className="text-sm text-slate-600 hover:text-brand-600 transition-colors">
+                  <a href={link.path} className="text-sm text-slate-400 hover:text-brand-400 transition-colors">
                     {link.name}
                   </a>
                 </li>
@@ -83,14 +82,13 @@ export default function SchoolFooter() {
           </div>
         </div>
 
-        <div className="h-px bg-slate-100 my-8 md:my-10" />
+        <div className="h-px bg-slate-800 my-8 md:my-10" />
 
-        {/* Bottom footer */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-slate-400">
-            &copy; {currentYear} ANTREP. All rights reserved. Not affiliated with Y Combinator or Startup School.
+          <p className="text-xs text-slate-600">
+            &copy; {currentYear} ANTREP. All rights reserved.
           </p>
-          <div className="flex items-center gap-2 text-xs text-slate-400">
+          <div className="flex items-center gap-2 text-xs text-slate-600">
             <span>Built for modern founders with</span>
             <Heart className="w-3.5 h-3.5 text-red-500 fill-red-500" />
             <span>globally</span>

@@ -1,49 +1,44 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Rocket, ArrowRight } from 'lucide-react';
-import Button from '../ui/Button';
+import { ArrowRight, Rocket } from 'lucide-react';
 
 export default function FinalCTA() {
   return (
-    <section className="bg-white py-16 lg:py-24 border-b border-slate-100">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative border border-slate-100 rounded-3xl p-8 sm:p-12 md:p-16 text-center shadow-md bg-gradient-to-b from-slate-50/50 to-white overflow-hidden">
-          {/* Decorative shapes */}
-          <div className="absolute -top-12 -left-12 w-24 h-24 rounded-full bg-brand-50" />
-          <div className="absolute -bottom-12 -right-12 w-32 h-32 rounded-full bg-brand-50/80" />
+    <section className="relative overflow-hidden bg-gradient-to-br from-brand-900 via-slate-900 to-slate-950 py-20 lg:py-28 border-b border-slate-800">
+      <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-brand-500/15 blur-3xl pointer-events-none" />
+      <div className="absolute -bottom-24 -left-24 w-80 h-80 rounded-full bg-brand-700/10 blur-3xl pointer-events-none" />
 
-          <div className="relative space-y-6">
-            <div className="inline-flex p-3 rounded-full bg-brand-50 text-brand-600 mb-2">
-              <Rocket className="w-6 h-6" />
-            </div>
-
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-              Ready to build a fundable startup?
-            </h2>
-
-            <p className="max-w-xl mx-auto text-base sm:text-lg text-slate-500 font-normal">
-              Enroll today in ANTREP School of Entrepreneurship. Learn at your own pace, download templates, and get investor-ready.
-            </p>
-
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-              <Link to="/school/signup" className="w-full sm:w-auto">
-                <Button variant="primary" size="lg" className="w-full font-bold shadow-md gap-2">
-                  Start Learning
-                  <ArrowRight className="w-4 h-4" />
-                </Button>
-              </Link>
-              <Link to="/school/login" className="w-full sm:w-auto">
-                <Button variant="white" size="lg" className="w-full font-bold text-slate-750 border-slate-200">
-                  Sign In
-                </Button>
-              </Link>
-            </div>
-
-            <p className="text-xs text-slate-400 font-medium">
-              100% Free. No credit card required. Self-paced enrollment.
-            </p>
-          </div>
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="inline-flex p-3 rounded-full bg-brand-500/20 text-brand-400 mb-6">
+          <Rocket className="w-7 h-7" />
         </div>
+
+        <h2 className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
+          Ready to build a{' '}
+          <span className="text-brand-400">fundable startup?</span>
+        </h2>
+
+        <p className="mt-6 max-w-xl mx-auto text-lg text-slate-400 leading-relaxed">
+          Enroll today in ANTREP School of Entrepreneurship. Learn at your own pace, download templates, and get investor-ready — completely free.
+        </p>
+
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
+          <Link to="/school/signup">
+            <button className="inline-flex items-center gap-2 bg-brand-500 hover:bg-brand-400 text-white font-bold text-base px-8 py-4 rounded-xl shadow-lg shadow-brand-900/60 hover:-translate-y-0.5 transform transition-all">
+              Start Learning Free
+              <ArrowRight className="w-4 h-4" />
+            </button>
+          </Link>
+          <Link to="/school/login">
+            <button className="inline-flex items-center gap-2 border border-slate-600 hover:border-slate-500 text-slate-300 hover:text-white font-bold text-base px-8 py-4 rounded-xl transition-all">
+              Sign In
+            </button>
+          </Link>
+        </div>
+
+        <p className="mt-6 text-xs text-slate-600 font-medium">
+          100% Free · No credit card required · Self-paced enrollment
+        </p>
       </div>
     </section>
   );
