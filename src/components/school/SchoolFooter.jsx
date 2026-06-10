@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Rocket, Heart } from 'lucide-react';
+import { Heart } from 'lucide-react';
+import logo from '../../assets/logo.svg';
 
 export default function SchoolFooter() {
   const currentYear = new Date().getFullYear();
@@ -30,8 +31,8 @@ export default function SchoolFooter() {
 
           <div className="space-y-4 col-span-1">
             <Link to="/school" className="flex items-center gap-2 group">
-              <div className="bg-brand-500 text-white p-1.5 rounded-lg group-hover:bg-brand-400 transition-colors">
-                <Rocket className="w-4 h-4" />
+              <div className="w-7 h-7 rounded-lg overflow-hidden flex-shrink-0">
+                <img src={logo} alt="ANTREP Logo" className="w-full h-full object-cover" />
               </div>
               <span className="font-bold text-lg text-white tracking-tight group-hover:text-brand-400 transition-colors">
                 ANTREP <span className="text-slate-500 font-normal">School</span>

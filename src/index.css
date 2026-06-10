@@ -44,6 +44,23 @@
   }
 }
 
+@keyframes mapPulse {
+  0%, 100% {
+    filter: brightness(1.4) drop-shadow(0 0 10px rgba(94, 155, 195, 0.35));
+    opacity: 0.78;
+  }
+  50% {
+    filter: brightness(1.9) drop-shadow(0 0 32px rgba(94, 155, 195, 0.75));
+    opacity: 1;
+  }
+}
+
+@layer utilities {
+  .animate-map-pulse {
+    animation: mapPulse 3s ease-in-out infinite;
+  }
+}
+
 @keyframes marqueeLeft {
   0%   { transform: translateX(0); }
   100% { transform: translateX(-33.333%); }

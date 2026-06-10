@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { Menu, X, Rocket, User } from 'lucide-react';
+import { Menu, X, User } from 'lucide-react';
+import logo from '../../assets/logo.svg';
 import Button from '../ui/Button';
 
 export default function SchoolNavbar() {
@@ -18,8 +19,8 @@ export default function SchoolNavbar() {
           {/* Logo */}
           <div className="flex items-center">
             <Link to="/school" className="flex items-center gap-2.5 group">
-              <div className="bg-brand-500 text-white p-2 rounded-lg group-hover:bg-brand-400 transition-colors">
-                <Rocket className="w-5 h-5" />
+              <div className="w-8 h-8 rounded-lg overflow-hidden flex-shrink-0">
+                <img src={logo} alt="ANTREP Logo" className="w-full h-full object-cover" />
               </div>
               <span className="font-extrabold text-lg sm:text-xl text-white tracking-tight group-hover:text-brand-400 transition-colors">
                 ANTREP <span className="font-medium text-slate-400">School</span>
